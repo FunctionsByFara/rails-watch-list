@@ -1,0 +1,14 @@
+<marquee behavior="scroll" direction="right">
+<h1 class="text-center">Here are your Movies</h1>
+</marquee>
+
+<% @lists.each do |list| %>
+<ul class= "d-flex">
+    <li class = "btn btn-light align-items-center border border-dark"><%= link_to list.name , list_path(list) %></li>
+</ul>
+<% end %>
+
+
+  <div class="btn btn-info m-3">
+    <%= link_to "Create new list" , new_list_path %>
+  </div>
